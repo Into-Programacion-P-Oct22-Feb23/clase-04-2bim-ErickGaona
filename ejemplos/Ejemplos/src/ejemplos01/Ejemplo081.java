@@ -5,28 +5,42 @@
  */
 package ejemplos01;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
  */
-public class Ejemplo08 {
+public class Ejemplo081 {
 
     public static void main(String[] args) {
         // 
-        
-        
+        Scanner entrada=new Scanner(System.in);
+        entrada.useLocale(Locale.US);
         String mensajeSuma;
         String mensajeSumaDos;
-        mensajeSuma = obtenerTablaSumar(10, 9); // se invoca al método 
-                                                       // obtenerTablaSumar
-                                                       // y el valor que 
-                                                       // devuelve se lo 
-                                                       // almacena  en mensajeSuma
+        int opcion;
+        int resultado;
+        System.out.println("Ingrese 1 para tabla de sumar\n2 para tabla de multiplicar");
+        opcion=entrada.nextInt();
         
-        mensajeSumaDos = obtenerTablaMultiplicar(10, 9);
+        if(opcion==1){
+            mensajeSuma= obtenerTablaSumar(10,9);
+            System.out.printf("%s\n", mensajeSuma);
+        }else{
+            if(opcion==2){
+                mensajeSumaDos=obtenerTablaMultiplicar(10, 9);
+                System.out.printf("%s\n", mensajeSumaDos);
+            
+            }else{
+                System.out.println("ERRORR!!!");
+            }
+        }
         
-        System.out.printf("%s\n", mensajeSuma);
-        System.out.printf("%s\n", mensajeSumaDos);
+              
+        
+        
     }
         
     public static String obtenerTablaSumar(int limite, int tabla){

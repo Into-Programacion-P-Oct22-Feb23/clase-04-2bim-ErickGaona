@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ejemplos01;
 
 /**
@@ -20,10 +16,18 @@ public class Ejemplo01 {
         
         String miCiudad = obtenerCiudadMayuscula("Loja");
         System.out.printf("%s\n", miCiudad);
+        
+        
+        //opcion 1
+        String mensaje_R= obtenerNombre();
+        System.out.printf("%s\n",mensaje_R);
+        //opcion 2
+        System.out.printf("%s\n",obtenerNombre());
+        
     }
     
     
-    public String obtenerCiudadMayuscula(String m){
+    public static String obtenerCiudadMayuscula(String m){
         String m2 = m.toUpperCase();
         return m2;
     }
